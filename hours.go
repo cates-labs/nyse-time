@@ -1,4 +1,4 @@
-package nyse_time
+package nysetime
 
 import "time"
 
