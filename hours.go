@@ -14,3 +14,17 @@ func IsNormalHours(t time.Time) bool {
 
 	return t.After(openTime) && t.Before(closeTime)
 }
+
+func IsExtendedHours(t time.Time) bool {
+	loc, _ := time.LoadLocation("America/New_York")
+	earlyCloseTime := time.Date(t.Year(), t.Month(), t.Day(), 13, 00, 0, 0, loc)
+	closeTime := time.Date(t.Year(), t.Month(), t.Day(), 16, 00, 0, 0, loc)
+	extendedCloseTime := time.Date(t.Year(), t.Month(), t.Day(), 20, 00, 0, 0, loc)
+
+	if IsEarlyClose(t) {
+		return t.After(earlyCloseTime) && t.Before(extendedCloseTime)
+	}
+
+	return t.After(closeTime) && t.Before(extendedCloseTime)
+
+}
