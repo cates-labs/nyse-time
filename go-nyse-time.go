@@ -14,3 +14,8 @@ func IsMarketOpen() bool {
 func IsMarketOpenCustom(t time.Time) bool {
 	return !IsWeekend(t) && !IsHoliday(t) && IsNormalHours(t)
 }
+
+func IsExtendedMarketOpen() bool {
+	currentTime := time.Now().UTC()
+	return !IsWeekend(currentTime) && !IsHoliday(currentTime) && IsExtendedHours(currentTime)
+}
