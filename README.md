@@ -37,7 +37,7 @@ If you don't have `Go` installed, you can download it from [here](https://go.dev
 Run the following command in the `console`, in the `project directory`, to install the library with `go get`
 
 ```plain
-go get github.com/ggoodwin/go-nyse-time
+go get github.com/cates-labs/nyse-time
 ```
 
 ### Importing
@@ -45,7 +45,7 @@ go get github.com/ggoodwin/go-nyse-time
 Add the import to your `.go` file
 
 ```go
-import nyse_time "github.com/ggoodwin/go-nyse-time"
+import nyse_time "github.com/cates-labs/nyse-time"
 ```
 
 ## 💰 Usage

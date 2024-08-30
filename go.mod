@@ -1,3 +1,3 @@
-module github.com/ggoodwin/go-nyse-time
+module github.com/cates-labs/nyse-time
 
-go 1.19
+go 1.21
